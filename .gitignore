@@ -1,0 +1,21 @@
+# Ignore virtual environment directories
+.venv/
+env/
+
+# Ignore Python bytecode files
+*.pyc
+__pycache__/
+
+# Ignore editor and IDE specific files
+.vscode/
+.idea/
+
+# Ignore the .env file
+.env
+
+# Ignore Flask-specific files
+instance/
+
+# Ignore any generated files or directories
+dist/
+build/
