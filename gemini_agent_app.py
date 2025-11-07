@@ -48,11 +48,12 @@ def assist():
         model = genai.GenerativeModel('gemini-2.0-flash')
 
         system_prompts = {
-            "generate": "Generate the following code based on the description:",
-            "debug": "Find and fix errors in the following code, and explain the fix:",
-            "explain": "Explain the following code:",
-            "refactor": "Suggest improvements or refactorings for the following code:",
-            "document": "Write documentation (e.g., docstrings, comments) for the following code:"
+            "generate_test_case": "Generate a C# NUnit test case using Selenium and the Page Object Model based on the following description:",
+            "generate_page_object": "Generate a C# Page Object Model class for Selenium based on the following description:",
+            "debug": "Find and fix errors in the following C# NUnit/Selenium code, and explain the fix:",
+            "explain": "Explain the following C# NUnit/Selenium code:",
+            "refactor": "Suggest improvements or refactorings for the following C# NUnit/Selenium code:",
+            "document": "Write documentation (e.g., docstrings, comments) for the following C# NUnit/Selenium code:"
         }
 
         if action not in system_prompts:

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gemini AI Coding Assistant</title>
+    <title>NUnit/Selenium Test Automation Assistant</title>
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,12 +15,13 @@
 </head>
 <body>
 <div class="container">
-    <h1>Gemini AI Coding Assistant</h1>
+    <h1>NUnit/Selenium Test Automation Assistant</h1>
 
     <form id="agent-form">
         <label for="action">Select Action:</label>
         <select id="action" name="action">
-            <option value="generate">Generate Code</option>
+            <option value="generate_test_case">Generate NUnit Test Case</option>
+            <option value="generate_page_object">Generate Page Object Class</option>
             <option value="debug">Debug Code</option>
             <option value="explain">Explain Code</option>
             <option value="refactor">Suggest Refactoring</option>
@@ -147,8 +148,8 @@
                     // Suggest a filename (user can change it)
                     link.download = 'ai_result.txt'; // Default filename
                     // Try to detect if it's likely code for a better extension
-                    if (rawResultText.trim().startsWith('def ') || rawResultText.trim().startsWith('import ') || rawResultText.includes('class ')) {
-                         link.download = 'ai_code.py';
+                    if (rawResultText.trim().startsWith('using ') || rawResultText.includes('namespace ') || rawResultText.includes('class ')) {
+                         link.download = 'ai_code.cs';
                     } else if (rawResultText.trim().startsWith('<') || rawResultText.includes('</')) {
                          link.download = 'ai_markup.html'; // Or .xml, .md etc.
                     } else if (rawResultText.trim().startsWith('function') || rawResultText.includes('const ') || rawResultText.includes('let ')) {
